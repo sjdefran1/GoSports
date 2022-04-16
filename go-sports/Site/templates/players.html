@@ -1,0 +1,53 @@
+{% extends "base.html" %}
+
+{% load static %}
+
+{% block page_title %} {{player.name}} {% endblock %}
+
+{% block content %}
+
+<style>
+    p {
+        font-size: 16pt;
+    }
+</style>
+
+
+<div>
+    <img src="{% static 'default_person.jpg' %}" style="  width: 150px;    ;" alt="Player Picture" align="left">
+
+    <p> Team: <a href="{% url 'team' team_name %}"> {{team_name}} </a> </p>
+    <p> Age: {{player.player_age}} </p>
+    <p> Height: </p>
+    <p> Position: Center <br> </p>
+
+</div>
+
+<h3 style="text-align: center; font-size: 24pt;"><span><u>Overview</u></span></h3>
+
+<table class="table">
+    <tr>
+        <th>Season</th>
+        <th>Games Played</th>
+        <th>Games Scored</th>
+        <th>Minutes Played Per Game</th>
+        <th>Field Goals Made</th>
+        <th>Field Goal %</th>
+        <th>3 Point %</th>
+        <th>Free Throw %</th>
+        <th>Points Per Game</th>
+    </tr>
+    <tr>
+        <td> 21-22 </td>
+        <td> {{ player.gp }} </td>
+        <td> {{ player.gs }} </td>
+        <td> {{ player.minutes }} </td>
+        <td> {{ player.fgm }} </td>
+        <td> {{ player.fg_pct }} </td>
+        <td> {{ player.fg3_pct }} </td>
+        <td> {{ player.ft_pct }} </td>
+        <td> {{ player.pts }} </td>
+    </tr>
+</table>
+
+{% endblock %}

@@ -1,0 +1,49 @@
+==========================================
+= USEFUL STUFF FOR MYSQL DB (nba_api_db) =
+==========================================
+* all tables are case sensitive *
+* quotes are back ticks (`) which is to the left of 1 on keyboard (took me a second to find),
+ only have to use on roster stats, will probably change *
+------------------------------------------------------------------------
+ex sql:
+	SELECT * FROM `Boston Celtics` <------ get whole table
+	SELECT name, PTS FROM `Boston Celtics` <--- get only columns names and pts
+	SELECT * FROM `Boston Celtics` LIMIT (start, end) <----- get rows where start and end are integers
+								 can be (1,1) to just get first row
+
+--------------------------------------------------------------
+ Different tables  
+-------------------
+-> `Boston Celtics`
+	-> tables that hold indivual stats for each player on a roster are identified by `Team Name`,
+   	ex: `Boston Celtics`, `Golden State Warriors`
+	-> columns: [name | SEASON_ID | PLAYER_AGE | GP | GS | MIN | FGM | FGA | FG_PCT | FG3M | FG3A | FG3_PCT | FTM
+ 		    | FTA | FT_PCT | OREB | DREB | REB | AST | STL | BLK | TOV | PF | PTS]
+	
+----------------------------------------------------------------------------------------------------------------
+-> BOS_last_five
+	-> for this type of table you do not need back ticks, probably going to change the others to use underscores
+	so it doesn't have to use a str
+	-> holds last 5 games for each team
+	-> columns: [index | GAME_DATE | MATCHUP | WL | W | L | W_PCT | MIN | FGM | FGA | FG_PCT | FG3M | FG3A |
+		     FG3_PCT | FTM | FTA | FT_PCT | OREB | DREB | REB  | AST | STL | BLK | TOV  | PF  | PTS ]
+
+--ABR List for Ref-- (might be useful at somepoint)
+['ATL', 'BOS', 'CLE', 'NOP', 'CHI', 'DAL', 'DEN', 'GSW', 'HOU', 'LAC', 'LAL', 'MIA', 'MIL', 'MIN', 'BKN', 
+'NYK', 'ORL', 'IND', 'PHI', 'PHX', 'POR', 'SAC', 'SAS', 'OKC', 'TOR', 'UTA', 'MEM', 'WAS', 'DET', 'CHA']
+
+-------------------------------------------------------------------------------------------------
+-> Games_Today
+	-> Holds all matchups today 
+	-> columns: [index | Home_Team | Away_Team | Home_Pts | Away_Pts | QTR | Time | Status]
+
+--------------------------------------------------------------------------------------------------
+-> league_team_stats
+	-> overall team stats for every team
+	-> columns:  [name | TEAM_ID | YEAR | GP | WINS | LOSSES | WIN_PCT | CONF_RANK | DIV_RANK | FGM
+  		     | FGA  | FG_PCT | FG3M | FG3A | FG3_PCT | FTM  | FTA  | FT_PCT | OREB | DREB | REB  | AST  
+		     | PF   | STL  | TOV  | BLK | PTS ] 
+----------------------------------------------------------------------------------------------------
+-> East_Standings & West_Standings
+	-> hold conference standing for respective name
+	-> columns: [ index | STANDINGSDATE | TEAM | G | W | L | W_PCT | HOME_RECORD | ROAD_RECORD]

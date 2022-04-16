@@ -1,0 +1,54 @@
+{% extends "base.html" %}
+{% block page_title %} {{team.name}} {% endblock %}
+{% block content %}
+
+<br>
+<br>
+<br>
+
+<table class="table">
+    <tr>
+        <th>Team</th>
+        <th>Year</th>
+        <th>GP</th>
+        <th>Wins</th>
+        <th>Losses</th>
+        <th>PPG</th>
+        <th>RPG</th>
+        <th>3PT%</th>
+        <th>FT%</th>
+    </tr>
+    {% for season in seasons %}
+    <tr>
+        <td>{{team.name}}</td>
+        <td>{{season.year}}</td>
+        <td>{{season.gp}}</td>
+        <td>{{season.wins}}</td>
+        <td>{{season.losses}}</td>
+        <td>{{season.pts}}</td>
+        <td>{{season.reb}}</td>
+        <td>{{season.fg3_pct}}</td>
+        <td>{{season.ft_pct}}</td>
+    </tr>
+    {% endfor %}
+</table>
+
+<h1 style="text-align: center"><u> Roster </u></h1><br>
+<table class="table">
+    <tr>
+        <th>Name</th>
+        <th>Age</th>
+        <th>GP</th>
+        <th>Minutes</th>
+    </tr>
+    {% for player in roster %}
+    <tr>
+        <td> <a href="{% url 'players' player.player_id %}"> {{player.name}} </a> </td>
+        <td>{{player.player_age}}</td>
+        <td>{{player.gp}}</td>
+        <td>{{player.min}}</td>
+    </tr>
+    {% endfor %}
+</table>
+
+{% endblock %}

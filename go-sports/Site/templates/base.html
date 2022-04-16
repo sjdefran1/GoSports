@@ -1,0 +1,60 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+<head>
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="{% static 'styling.css' %}">
+
+<!-- Bootstrap stuff, makes nice tables, as well as formats pages to be split into parts, breaks header i think -->
+<!-- It is specifically this one messing it up -->
+<!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">   -->
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
+<!-- If you remove these will fix header, but will have less pretty tables -->
+
+</head>
+<body>
+
+    <div class="Header">
+      <a href="{% url 'home' %}">
+        <img id="logo" src="{% static 'blue_go_sports.png' %}" alt="Logo" width="200" height="200" align="left">
+      </a>
+        
+      <h1> {% block page_title %} Header Template Test {% endblock %} </h1>
+    </div>
+
+<div class="topnav">
+
+  <a href="{% url 'home' %}">HOME</a>
+  <a href="{% url 'standings' %}">STANDINGS</a>
+  <a href="{% url 'schedule' %}">SCHEDULE</a>
+  <a href="{% url 'teams' %}">TEAMS</a>
+  <div class="dropdown">
+    <button class="dropbtn">ACCOUNT <i class="fa fa-caret-down"></i></button>
+      <div class="dropdown-content">
+      <a href="{% url 'login' %}">Login</a>
+      <a href="{% url 'logout' %}">Logout</a>
+      <a href="{% url 'signup' %}">Create Account</a>
+      </div>
+  </div>
+  
+
+
+  <div class="search-container">
+    <form action="{% url 'search' %}" method="get">
+      <input id="searchPortion" type="text" placeholder="Search.." name="search">
+      <button type="submit"><i class="fa fa-search"></i></button>
+    </form>
+  </div>
+</div>
+
+    {% block content %}
+
+    {% endblock %}
+
+</body>
+</html>

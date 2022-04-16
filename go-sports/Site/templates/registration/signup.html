@@ -1,0 +1,55 @@
+
+{% extends "base.html" %}
+
+{% block page_title %} Create an Account {% endblock %}
+
+{% block content %}
+<div class="container">
+  <div class="createAccount">
+        <h1>Register</h1>
+        <p>Please fill in this form to create an account.</p>
+        <hr>
+    
+        <p id="FinalResult" style="color: red;"></p>
+
+        <!--
+        <label for="name"><b>Name</b></label>
+        <input type="text" placeholder="Enter Name" name="name" id="name">
+
+        <label for="email"><b>Email</b></label>
+        <input type="text" placeholder="Enter Email" name="email" id="email">
+    
+        <label for="psw"><b>Password</b></label>
+        <input type="password" placeholder="Enter Password" name="psw" id="psw">
+    
+        <label for="psw-repeat"><b>Repeat Password</b></label>
+        <input type="password" placeholder="Repeat Password" name="pswRepeat" id="pswRepeat">
+        -->
+
+      {% if form.non_field_errors %}
+        <ul>
+        {% for error in form.non_field_errors %}
+            <li>{{ error }}</li>
+        {% endfor %}
+        </ul>
+      {% endif %}
+
+    {# To really make sure you debug this #}
+    {{ form.errors }}
+
+        <form method="post" action="">
+          {% csrf_token %}
+
+          {{ form.as_p }}
+
+          <button id="RegisterButton" type="submit" class="registerbtn">Register</button>
+        </form>    
+    
+        <p style="background-color: #f1f1f1; text-align: center; padding: 10px;">Already have an account? <a href="{% url 'login' %}">Sign in</a>.</p>
+
+        <!-- <script src="https://unpkg.com/native-toast@2.0.0/dist/native-toast.min.js"></script> -->
+        <!-- <script src="../JS_Files/Validate_Create_Account.js"></script> -->
+              
+  </div>
+</div> 
+{% endblock %}
