@@ -4,10 +4,8 @@
 {% block page_title %} Teams {% endblock %}
 {% block content %}
 
-<div align=center>
-<h style="font-family:'Playfair Display'; font-size:40px;"> Choose your team. </h>
-</div>
 
+<!-- 
 <div class="teams_grid">
     <div class="teams_grid_item"> <a href="{% url 'team' 'Philadelphia 76ers' %}"> <img class="teams" src="{% static 'circles/76ers_circle.png' %}" height=100px width=100px alt="76ers"></img> </a> </div>
 
@@ -70,5 +68,10 @@
     <div class="teams_grid_item"> <a href="{% url 'team' 'Washington Wizards' %}"> <img class="teams" src="{% static 'circles/wizards_circle.png' %}" height=100px width=100px alt="Wizards"></img> </a> </div>
 
 </div>
-  
+-->
+<div class="teams_grid">
+    {% for team in all_teams %}
+        <div class="teams_grid_item"> <a href="{% url 'team' team.name %}"> <img class="teams" src="https://cdn.nba.com/logos/nba/{{team.team_id}}/primary/L/logo.svg" height=110px width=110px alt="{{team.name}}"></img> </a> </div>
+    {% endfor %}
+
 {% endblock %}

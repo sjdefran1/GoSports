@@ -276,8 +276,8 @@ button.primaryContained:hover {
 .teams_grid {
   display: grid;
   padding: 10px;
-  column-gap: 5px;
-  row-gap: 10px;
+  column-gap: 3px;
+  row-gap: 40px;
   grid-template-columns: repeat(10 , 1.1fr);
   grid-template-rows: repeat(3, 110px);
   align-items: center;
@@ -286,12 +286,13 @@ button.primaryContained:hover {
 
 .teams_grid_item {
   padding: 10px;
+
 }
 
 img.teams:hover,
 img.teams:focus {
-  width: 108px;
-  height: 108px;
+  width: 112px;
+  height: 112px;
 }
 
 .scheduleTable {
@@ -365,6 +366,56 @@ img.teams:focus {
   text-decoration: none;
 }
 .rosterTable a:hover{
+  text-decoration: underline;
+  font-size: 102%;
+}
+/* ------------ end roster table-----*/
+
+.standingsTable {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  table-layout: fixed;
+  border: 1px solid black;
+  width: 95%;
+  margin-left: 3%;
+  margin-right: 3%;
+
+  /*
+  min-width: 50%;
+  max-width: 75%;
+  margin-left: 0%;
+  */
+}
+
+.standingsTable td, th {
+  /*border: 1px solid black;*/
+  text-align: left;
+}
+
+.standingsTable th {
+  background-color: #0c2934;
+  color: white;
+  width: 1%;
+}
+
+.standingsTable td {
+  padding-left: 2px;
+}
+
+.standingsTable tr {
+  height: 50px;
+  border-bottom: 1px solid black;
+}
+.standingsTable tr:nth-child(even) {
+  background-color: #bebdbd;
+}
+.standingsTable tr:hover{background-color: rgb(148, 158, 246);}
+
+.standingsTable a:link {
+  color: rgb(54, 84, 169);
+  text-decoration: none;
+}
+.standingsTable a:hover{
   text-decoration: underline;
   font-size: 102%;
 }

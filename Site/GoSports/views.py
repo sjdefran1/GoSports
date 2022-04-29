@@ -154,3 +154,7 @@ def home_page(request):
     games_today = GamesToday.objects.all()
     gameOver = GamesToday.objects.filter(status='final')
     return render(request, 'home.html', locals())
+
+def choose_team_page(request):
+    all_teams = Teams.objects.all()
+    return render(request, 'default_team.html', locals())
