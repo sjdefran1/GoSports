@@ -100,7 +100,7 @@ Nba Api is what allowed this entire project to come together with real informati
 
 ### Team and Player Pages
 #### Choose Team Page
-![general_team](https://user-images.githubusercontent.com/72476187/165996724-c5d4250b-d511-44d2-b72b-8c6615356b94.png)
+![image](https://user-images.githubusercontent.com/72476187/166074494-1ab58bc0-6f13-46ee-91bd-866a87d2e23a.png)
 #### Team Page
 #### (1)
 ![specific_team1](https://user-images.githubusercontent.com/72476187/165996792-174a3fa0-e116-4911-8868-afb747c2480b.png)
@@ -114,7 +114,7 @@ Nba Api is what allowed this entire project to come together with real informati
 ### Home Page
 ![home_page](https://user-images.githubusercontent.com/72476187/165997323-af032c30-9686-42f9-9a87-8a6aba001587.png)
 ### Standings
-![standings](https://user-images.githubusercontent.com/72476187/165996558-7907d76a-9af3-4a06-9035-1190eca6fa66.png)
+![image](https://user-images.githubusercontent.com/72476187/166074342-3c5375cf-72b1-49a6-bc60-1f28fa5af887.png)
 ### Schedule
 ![schedule](https://user-images.githubusercontent.com/72476187/165996625-673a78f5-d38b-41d9-b4bc-87411451a7cc.png)
 ### Django Models Design:
