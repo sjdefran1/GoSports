@@ -1,3 +1,8 @@
+"""
+@author Sam DeFrancisco
+This Script Gathers the last 5 seasons for each nba team and stores them within the Seasons table
+
+"""
 import pandas as pd
 import time
 import sqlite3
@@ -24,4 +29,4 @@ last_5_years = last_5_years.dropna()
 last_5_years[['TEAM_ID','GP','WINS','LOSSES','CONF_RANK', 'DIV_RANK']] = last_5_years[['TEAM_ID','GP','WINS','LOSSES','CONF_RANK', 'DIV_RANK']].astype('i')
 last_5_years = last_5_years.reset_index(drop=True)
 #league_team_stats.index.name = 'name'
-last_5_years.to_sql('Seasons', con=conn, if_exists='replace')
+last_5_years.to_sql('TeamSeasons', con=conn, if_exists='replace')

@@ -227,7 +227,7 @@ def get_upcoming_games():
                 'Away_Team':f"{away_team.get('teamCity')} {away_team.get('teamName')}",
                 'Away_Team_id':f"{away_team.get('teamId')}",
                 'Away_Seed':away_team.get('seed'),
-                'Matchup':f"{away_team.get('teamTricode')} @ {home_team.get('teamTricode')}",
+                'Matchup':f"{away_team.get('seed')} {away_team.get('teamTricode')} @ {home_team.get('seed')} {home_team.get('teamTricode')}",
                 'Home_Pts':home_team.get('score'),
                 'Away_Pts':away_team.get('score'),
                 'Status':game.get('gameStatusText'),

@@ -2,6 +2,16 @@
 """
 @author: Sam DeFrancisco
 
+ *discarded* 
+ 
+ not using this file really anymore, rather using Players_commons.py
+ and Players_Seasons.py 
+ 
+ not deleting incase need again
+ 
+ *discarded*
+
+
  This file does most of the work in populating the mysql db
  Gathers each player from every rosters indivual stats reformatted into dataframes then entered into mysql db
  Gathers each teams total stats and enters them into sql db
