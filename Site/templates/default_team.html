@@ -1,0 +1,74 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block page_title %} Teams {% endblock %}
+{% block content %}
+
+<div align=center>
+<h style="font-family:'Playfair Display'; font-size:40px;"> Choose your team. </h>
+</div>
+
+<div class="teams_grid">
+    <div class="teams_grid_item"> <a href="{% url 'team' 'Philadelphia 76ers' %}"> <img class="teams" src="{% static 'circles/76ers_circle.png' %}" height=100px width=100px alt="76ers"></img> </a> </div>
+
+    <div class="teams_grid_item"> <a href="{% url 'team' 'Milwaukee Bucks' %}"> <img class="teams" src="{% static 'circles/bucks_circle.png' %}" height=100px width=100px alt="Bucks"></img> </a> </div>
+
+    <div class="teams_grid_item"> <a href="{% url 'team' 'Chicago Bulls' %}"> <img class="teams" src="{% static 'circles/bulls_circle.png' %}" height=100px width=100px alt="Bulls"></img> </a> </div>
+
+    <div class="teams_grid_item"> <a href="{% url 'team' 'Cleveland Cavaliers' %}"> <img class="teams" src="{% static 'circles/cavaliers_circle.png' %}" height=100px width=100px alt="Cavaliers"></img> </a> </div>
+
+    <div class="teams_grid_item"> <a href="{% url 'team' 'Boston Celtics' %}"> <img class="teams" src="{% static 'circles/celtics_circle.png' %}" height=100px width=100px alt="Celtics"></img> </a> </div>
+
+    <div class="teams_grid_item"> <a href="{% url 'team' 'Los Angeles Clippers' %}"> <img class="teams" src="{% static 'circles/clippers_circle.png' %}" height=100px width=100px alt="Clippers"></img> </a> </div>
+
+    <div class="teams_grid_item"> <a href="{% url 'team' 'Memphis Grizzlies' %}"> <img class="teams" src="{% static 'circles/grizzlies_circle.png' %}" height=100px width=100px alt="Grizzlies"></img> </a> </div>
+
+    <div class="teams_grid_item"> <a href="{% url 'team' 'Atlanta Hawks' %}"> <img class="teams" src="{% static 'circles/hawks_circle.png' %}" height=100px width=100px alt="Hawks"></img> </a> </div>
+
+    <div class="teams_grid_item"> <a href="{% url 'team' 'Miami Heat' %}"> <img class="teams" src="{% static 'circles/heat_circle.png' %}" height=100px width=100px alt="Heat"></img> </a> </div>
+
+    <div class="teams_grid_item"> <a href="{% url 'team' 'Charlotte Hornets' %}"> <img class="teams" src="{% static 'circles/hornets_circle.png' %}" height=100px width=100px alt="Hornets"></img> </a> </div>
+
+    <div class="teams_grid_item"> <a href="{% url 'team' 'Utah Jazz' %}"> <img class="teams" src="{% static 'circles/jazz_circle.png' %}" height=100px width=100px alt="Jazz"></img> </a> </div>
+
+    <div class="teams_grid_item"> <a href="{% url 'team' 'Sacramento Kings' %}"> <img class="teams" src="{% static 'circles/kings_circle.png' %}" height=100px width=100px alt="Kings"></img> </a> </div>
+
+    <div class="teams_grid_item"> <a href="{% url 'team' 'New York Knicks' %}"> <img class="teams" src="{% static 'circles/knicks_circle.png' %}" height=100px width=100px alt="Knicks"></img> </a> </div>
+
+    <div class="teams_grid_item"> <a href="{% url 'team' 'Los Angeles Lakers' %}"> <img class="teams" src="{% static 'circles/lakers_circle.png' %}" height=100px width=100px alt="Lakers"></img> </a> </div>
+
+    <div class="teams_grid_item"> <a href="{% url 'team' 'Orlando Magic' %}"> <img class="teams" src="{% static 'circles/magic_circle.png' %}" height=100px width=100px alt="Magic"></img> </a> </div>
+
+    <div class="teams_grid_item"> <a href="{% url 'team' 'Dallas Mavericks' %}"> <img class="teams" src="{% static 'circles/mavericks_circle.png' %}" height=100px width=100px alt="Mavericks"></img> </a> </div>
+
+    <div class="teams_grid_item"> <a href="{% url 'team' 'Brooklyn Nets' %}"> <img class="teams" src="{% static 'circles/nets_circle.png' %}" height=100px width=100px alt="Nets"></img> </a> </div>
+
+    <div class="teams_grid_item"> <a href="{% url 'team' 'Denver Nuggets' %}"> <img class="teams" src="{% static 'circles/nuggets_circle.png' %}" height=100px width=100px alt="Nuggets"></img> </a> </div>
+
+    <div class="teams_grid_item"> <a href="{% url 'team' 'Indiana Pacers' %}"> <img class="teams" src="{% static 'circles/pacers_circle.png' %}" height=100px width=100px alt="Pacers"></img> </a> </div>
+
+    <div class="teams_grid_item"> <a href="{% url 'team' 'New Orleans Pelicans' %}"> <img class="teams" src="{% static 'circles/pelicans_circle.png' %}" height=100px width=100px alt="Pelicans"></img> </a> </div>
+
+    <div class="teams_grid_item"> <a href="{% url 'team' 'Detroit Pistons' %}"> <img class="teams" src="{% static 'circles/pistons_circle.png' %}" height=100px width=100px alt="Pistons"></img> </a> </div>
+
+    <div class="teams_grid_item"> <a href="{% url 'team' 'Toronto Raptors' %}"> <img class="teams" src="{% static 'circles/raptors_circle.png' %}" height=100px width=100px alt="Raptors"></img> </a> </div>
+
+    <div class="teams_grid_item"> <a href="{% url 'team' 'Houston Rockets' %}"> <img class="teams" src="{% static 'circles/rockets_circle.png' %}" height=100px width=100px alt="Rockets"></img> </a> </div>
+
+    <div class="teams_grid_item"> <a href="{% url 'team' 'San Antonio Spurs' %}"> <img class="teams" src="{% static 'circles/spurs_circle.png' %}" height=100px width=100px alt="Spurs"></img> </a> </div>
+
+    <div class="teams_grid_item"> <a href="{% url 'team' 'Phoenix Suns' %}"> <img class="teams" src="{% static 'circles/suns_circle.png' %}" height=100px width=100px alt="Suns"></img> </a> </div>
+
+    <div class="teams_grid_item"> <a href="{% url 'team' 'Oklahoma City Thunder' %}"> <img class="teams" src="{% static 'circles/thunder_circle.png' %}" height=100px width=100px alt="Thunder"></img> </a> </div>
+
+    <div class="teams_grid_item"> <a href="{% url 'team' 'Minnesota Timberwolves' %}"> <img class="teams" src="{% static 'circles/timberwolves_circle.png' %}" height=100px width=100px alt="Timberwolves"></img> </a> </div>
+
+    <div class="teams_grid_item"> <a href="{% url 'team' 'Portland Trailblazers' %}"> <img class="teams" src="{% static 'circles/trailblazers_circle.png' %}" height=100px width=100px alt="Trailblazers"></img> </a> </div>
+
+    <div class="teams_grid_item"> <a href="{% url 'team' 'Golden State Warriors' %}"> <img class="teams" src="{% static 'circles/warriors_circle.png' %}" height=100px width=100px alt="Warriors"></img> </a> </div>
+
+    <div class="teams_grid_item"> <a href="{% url 'team' 'Washington Wizards' %}"> <img class="teams" src="{% static 'circles/wizards_circle.png' %}" height=100px width=100px alt="Wizards"></img> </a> </div>
+
+</div>
+  
+{% endblock %}

@@ -1,0 +1,59 @@
+{% extends "base.html" %}
+{% block page_title %} GoSports! {% endblock %}
+{% load static %}
+{% block content %}
+
+<style>
+    p {
+        text-align: center;
+        font-size: 16pt;
+        color: #124559;
+    }
+
+    .smallHeader {
+        height: 140px;
+        width: 100%;
+    }
+
+    .scheduleTable {
+        border: 5px solid black;
+        color: black;
+        background-color: #AEC3B0;
+
+    }
+
+    .scheduleTable td {
+        border-right: 5px solid black;
+        font-size: 18pt;
+    }
+</style>
+
+<div>
+    <img src="{% static 'HomePageItem.png' %}" class=smallHeader></img>
+</div>
+
+<p>Welcome to GoSports! This website is the place to go to find stats on your favorite teams and players.</p>
+
+<h1 style="text-align: center;"><u>Games Today</u></h1>
+
+<table class="scheduleTable">
+    {% for game in games_today %}
+    
+    {% if game.qtr == 0 %}
+    <td>
+         {{game.home_team}}  @  {{game.away_team}} <br> <br>
+        {{game.status}}
+    </td>
+    {% else %}
+    <td>
+        {{game.home_team}} @ {{game.away_team}} <br> <br>
+        {{game.home_pts|floatformat:"0"}} - {{game.away_pts|floatformat:"0"}} <br> <br>
+        {{game.status}}: {{game.time}} remaining
+    </td>
+    {% endif %}
+    
+    {% endfor %}
+    </table>
+
+
+{% endblock %}

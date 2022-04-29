@@ -1,0 +1,72 @@
+{% extends "base.html" %}
+{% load static %}
+{% block page_title %} {{player.full_name}} {% endblock %}
+{% block content %}
+
+<style>
+    p {
+        font-size: 16pt;
+    }
+    img{
+        border-radius: 50%;
+    }
+</style>
+
+
+<div>
+    <img src="https://ak-static.cms.nba.com/wp-content/uploads/headshots/nba/latest/260x190/{{player.person_id}}.png" style="  width: 250px;    ;" alt="Player Picture" align="left">
+    <p> Name: {{player.full_name}}</p>
+    <p> Team: <a href="{% url 'team' team_name %}"> {{team_name}} </a> </p>
+    <p> Height: {{player.height}}</p>
+    <p> Weight: {{player.weight}}</p>
+    <p style="margin-left: 17%;"> Position: {{player.position}}</p>
+    <p style="margin-left: 17%;"> Jersey Number: {{player.jersey}}</p>
+
+</div>
+
+<h3 style="text-align: center; font-size: 24pt;"><span><u>Career</u></span></h3>
+
+<table class="rosterTable">
+    <tr>
+        <th>Season</th>
+        <th>Age</th>
+        <th>Team</th>
+        <th>GP</th>
+        <th>GS</th>
+        <th>Minutes</th>
+        <th>FGM</th>
+        <th>FGA</th>
+        <th>FG_PCT</th>
+        <th>FG3_PCT</th>
+        <th>FT_PCT</th>
+        <th>REB</th>
+        <th>AST</th>
+        <th>STL</th>
+        <th>BLK</th>
+        <th>TOV</th>
+        <th>PTS</th>
+    </tr>
+    {% for season in player_szns %}
+    <tr>
+        <td>{{season.season_id}}</td>
+        <td>{{season.player_age|floatformat:"0"}}</td>
+        <td>{{season.team_abbreviation}}</td>
+        <td>{{season.gp}}</td>
+        <td>{{season.gs}}</td>
+        <td>{{season.min}}</td>
+        <td>{{season.fgm}}</td>
+        <td>{{season.fga}}</td>
+        <td>{{season.fg_pct}}</td>
+        <td>{{season.fg3_pct}}</td>
+        <td>{{season.ft_pct}}</td>
+        <td>{{season.reb}}</td>
+        <td>{{season.ast}}</td>
+        <td>{{season.stl}}</td>
+        <td>{{season.blk}}</td>
+        <td>{{season.tov}}</td>
+        <td>{{season.pts}}</td>
+    </tr>
+    {% endfor %}
+</table>
+
+{% endblock %}

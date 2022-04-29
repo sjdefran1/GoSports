@@ -1,0 +1,79 @@
+{% extends "base.html" %}
+{% block page_title %} {{team.name}} {% endblock %}
+{% block content %}
+
+<br>
+<br>
+<br>
+<!-- <img src="https://cdn.nba.com/logos/nba/{{team.team_id}}/primary/L/logo.svg"> !-->
+<table class="table">
+    <tr>
+        <th>Team</th>
+        <th>Year</th>
+        <th>GP</th>
+        <th>Wins</th>
+        <th>Losses</th>
+        <th>PPG</th>
+        <th>RPG</th>
+        <th>3PT%</th>
+        <th>FT%</th>
+    </tr>
+    {% for season in team_seasons %}
+    <tr>
+        <td>{{team.name}}</td>
+        <td>{{season.year}}</td>
+        <td>{{season.gp}}</td>
+        <td>{{season.wins}}</td>
+        <td>{{season.losses}}</td>
+        <td>{{season.pts}}</td>
+        <td>{{season.reb}}</td>
+        <td>{{season.fg3_pct}}</td>
+        <td>{{season.ft_pct}}</td>
+    </tr>
+    {% endfor %}
+</table>
+
+<h1 style="text-align: center"><u> Roster </u></h1><br>
+<table class="rosterTable">
+    <tr>
+        <th>Name</th>
+        <th>Age</th>
+        <th>GP</th>
+        <th>GS</th>
+        <th>Minutes</th>
+        <th>FGM</th>
+        <th>FGA</th>
+        <th>FG_PCT</th>
+        <th>FG3_PCT</th>
+        <th>FT_PCT</th>
+        <th>REB</th>
+        <th>AST</th>
+        <th>STL</th>
+        <th>BLK</th>
+        <th>TOV</th>
+        <th>PTS</th>
+
+    </tr>
+    {% for player, season in player_current_szns.items %}
+    <tr>
+        <td> <a href="{% url 'players' season.player.person_id %}"> {{player}} </a> </td>
+        <td>{{season.player_age|floatformat:"0"}}</td>
+        <td>{{season.gp}}</td>
+        <td>{{season.gs}}</td>
+        <td>{{season.min}}</td>
+        <td>{{season.fgm}}</td>
+        <td>{{season.fga}}</td>
+        <td>{{season.fg_pct}}</td>
+        <td>{{season.fg3_pct}}</td>
+        <td>{{season.ft_pct}}</td>
+        <td>{{season.reb}}</td>
+        <td>{{season.ast}}</td>
+        <td>{{season.stl}}</td>
+        <td>{{season.blk}}</td>
+        <td>{{season.tov}}</td>
+        <td>{{season.pts}}</td>
+    </tr>
+    {% endfor %}
+</table>
+
+{% endblock %}

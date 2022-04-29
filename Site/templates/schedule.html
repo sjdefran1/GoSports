@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+{% block page_title %} Schedule {% endblock %}
+{% load static %}
+{% block content %}
+
+<h1 style="text-align: center;"><u>Weekly Schedule</u></h1>
+
+<table class="scheduleTable">
+  {% for day , games in games_by_day.items %}
+  
+  <tr>
+    <!-- Header -->
+    <th> {{day}} </th>
+
+    <!-- All Games on that Day -->
+    {% for game in games %}
+        <td>{{game.away_seed}} <a href="{% url 'team' game.away_team %}">{{game.away_team}}</a> @ <br>{{game.home_seed}} <a href="{% url 'team' game.home_team %}">{{game.home_team}}</a><br>{{game.status}}</td>
+    {% endfor %}
+
+    <!-- Add Extra Spacing to Empty Columns -->
+    {% for ch in num_cols %}
+      {% if forloop.counter0 >= games|length %}
+        <td> </td>
+      {% endif %}
+    {% endfor %}
+
+  </tr>
+
+  {% endfor %}
+
+</table>
+
+{% endblock %}

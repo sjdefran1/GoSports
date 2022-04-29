@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+
+{% block page_title %} GoSports! {% endblock %}
+
+{% block content %}
+
+<h1>Search Results</h1>
+{% if teams|length > 0 %}
+<h2>Teams</h2>
+<ul>
+  {% for team in teams %}
+  <li>
+    <a href="{% url 'team' team.name %}">{{ team.name }}, {{ team.team_id }}</a>
+  </li>
+  {% endfor %}
+</ul>
+{% endif %}
+
+{% if players|length > 0 %}
+<h2>Players</h2>
+<ul>
+  {% for p in players %}
+  <li>
+    <a href="{% url 'players' p.person_id %}">{{ p.full_name }}, {{ p.team_name }}</a>
+  </li>
+  {% endfor %}
+</ul>
+{% endif %}
+
+{% endblock %}
