@@ -4,13 +4,13 @@
 
 {% block content %}
 
-<h1>Search Results</h1>
+<h1>Search Results for {{query}}</h1>
 {% if teams|length > 0 %}
 <h2>Teams</h2>
 <ul>
   {% for team in teams %}
   <li>
-    <a href="{% url 'team' team.name %}">{{ team.name }}, {{ team.team_id }}</a>
+    <a href="{% url 'team' team.name %}">{{ team.name }} <img src="https://cdn.nba.com/logos/nba/{{team.team_id}}/primary/L/logo.svg" height=35px width=35px alt="{{team.name}}"></img></a>
   </li>
   {% endfor %}
 </ul>
@@ -21,8 +21,9 @@
 <ul>
   {% for p in players %}
   <li>
-    <a href="{% url 'players' p.person_id %}">{{ p.full_name }}, {{ p.team_name }}</a>
+    <a href="{% url 'players' p.person_id %}">  <img src="https://ak-static.cms.nba.com/wp-content/uploads/headshots/nba/latest/260x190/{{p.person_id}}.png" style="width: 50px;" alt="Player Picture" align="left"> {{ p.full_name }} <img src="https://cdn.nba.com/logos/nba/{{p.team_id.team_id}}/primary/L/logo.svg" height=35px width=35px alt="{{team.name}}"></img></a>
   </li>
+  <br><br>
   {% endfor %}
 </ul>
 {% endif %}
