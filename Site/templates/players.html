@@ -41,13 +41,13 @@
 
 
 <div class="row">
-    <img src="https://ak-static.cms.nba.com/wp-content/uploads/headshots/nba/latest/260x190/{{player.person_id}}.png" style="  width: 250px;    ;" alt="Player Picture" align="left">
-    <p> Team: <a href="{% url 'team' team_name %}"> {{team_name}}  <img src="https://cdn.nba.com/logos/nba/{{player.team_id.team_id}}/primary/L/logo.svg" height=35px width=35px alt="{{team.name}}"></img></a> </p> 
+    <img style="margin-top:2%" src="https://ak-static.cms.nba.com/wp-content/uploads/headshots/nba/latest/260x190/{{player.person_id}}.png" style="  width: 250px;    ;" alt="Player Picture" align="left">
+    <p> Team: <a href="{% url 'team' team_name %}"> {{team_name}}  <img  src="https://cdn.nba.com/logos/nba/{{player.team_id.team_id}}/primary/L/logo.svg" height=35px width=35px alt="{{team.name}}"></img></a> </p> 
     <p> Name: {{player.full_name}}</p>
     <p style="margin-left: 250px;"> Height: {{player.height}}</p>
     <p style="margin-left: 250px;"> Weight: {{player.weight}}</p>
-    <p style="margin-left: 250px;"> Position: {{player.position}}</p>
-    <p style="margin-left: 250px;"> Jersey Number: {{player.jersey}}</p>
+    <p style="margin-left: 260px;"> Position: {{player.position}}</p>
+    <p style="margin-left: 260px;"> Jersey Number: {{player.jersey}}</p>
 </div>
 
 <h3 style="text-align: center; font-size: 24pt;"><span><u>Career</u></span></h3>
