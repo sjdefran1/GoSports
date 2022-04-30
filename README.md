@@ -100,23 +100,28 @@ Nba Api is what allowed this entire project to come together with real informati
 
 ### Team and Player Pages
 #### Choose Team Page
-![image](https://user-images.githubusercontent.com/72476187/166074494-1ab58bc0-6f13-46ee-91bd-866a87d2e23a.png)
+![choose_team](https://user-images.githubusercontent.com/72476187/166098756-b93696a3-f131-4b0f-9713-0bd15258a68d.png)
+
+#### Specific Player Page (1)
+![tatum_overview](https://user-images.githubusercontent.com/72476187/166098772-d1f6ca81-fed1-484e-9f38-7ec698039806.png)
+#### Career view (2)
+![tatum_career](https://user-images.githubusercontent.com/72476187/166098795-5088c34b-9b5c-4069-9563-d6a46f9f0a38.png)
+
+### Home Page
+#### Live Scores and Game times available using game_standings.py
+![image](https://user-images.githubusercontent.com/72476187/166098813-0b0570ae-b509-444f-88e6-70cb7ce98da8.png)
+
+### Standings
+![image](https://user-images.githubusercontent.com/72476187/166098735-c741b513-5889-4b28-8ed3-4c0c37f51383.png)
+### Schedule
+![schedule](https://user-images.githubusercontent.com/72476187/165996625-673a78f5-d38b-41d9-b4bc-87411451a7cc.png)
+
 #### Team Page
 #### (1)
 ![specific_team1](https://user-images.githubusercontent.com/72476187/165996792-174a3fa0-e116-4911-8868-afb747c2480b.png)
 #### (2)
 ![specific_team2](https://user-images.githubusercontent.com/72476187/165996863-fb20872a-4beb-412f-98b5-093fe0addb21.png)
-#### Specific Player Page (1)
-![player_page](https://user-images.githubusercontent.com/72476187/165997030-95aebd2f-58e4-499a-98bd-4e6db7153598.png)
-#### Career view (2)
-![image](https://user-images.githubusercontent.com/72476187/165997730-d12a0acc-93d5-4242-8a2a-45068bd44423.png)
 
-### Home Page
-![home_page](https://user-images.githubusercontent.com/72476187/165997323-af032c30-9686-42f9-9a87-8a6aba001587.png)
-### Standings
-![image](https://user-images.githubusercontent.com/72476187/166074342-3c5375cf-72b1-49a6-bc60-1f28fa5af887.png)
-### Schedule
-![schedule](https://user-images.githubusercontent.com/72476187/165996625-673a78f5-d38b-41d9-b4bc-87411451a7cc.png)
 ### Django Models Design:
 ![gosports_db](https://user-images.githubusercontent.com/72476187/165996178-c3003bbe-5e9f-43fe-a276-a144997c8926.png)
 
