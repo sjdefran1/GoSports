@@ -122,6 +122,12 @@ Nba Api is what allowed this entire project to come together with real informati
 #### (2)
 ![specific_team2](https://user-images.githubusercontent.com/72476187/165996863-fb20872a-4beb-412f-98b5-093fe0addb21.png)
 
+### Search Functionality
+#### Teams
+![team_search](https://user-images.githubusercontent.com/72476187/166099835-5a3c651d-3f99-423c-a0f3-563e704b4139.png)
+#### Players
+![player_search](https://user-images.githubusercontent.com/72476187/166099866-d9587209-40e1-4ada-9593-2917bcfdfc59.png)
+
 ### Django Models Design:
 ![gosports_db](https://user-images.githubusercontent.com/72476187/165996178-c3003bbe-5e9f-43fe-a276-a144997c8926.png)
 
