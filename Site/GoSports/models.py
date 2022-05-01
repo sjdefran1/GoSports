@@ -126,7 +126,7 @@ class Players(models.Model):
     draft_round = models.TextField(db_column='DRAFT_ROUND', blank=True, null=True)  # 1
     draft_number = models.TextField(db_column='DRAFT_NUMBER', blank=True, null=True)  # 3
     greatest_75_flag = models.TextField(db_column='GREATEST_75_FLAG', blank=True, null=True)  # If 'Y' Was on nba75, if 'N' was not on nba75
-
+    full_team_name = f"{team_city} {team_name}"
     class Meta:
         managed = False
         db_table = 'Players'

@@ -4,24 +4,50 @@
 {% block content %}
 
 <style>
+    * {
+        box-sizing: border-box;
+      }
+      
+      .row {
+        margin-top: 2px;
+        background-color: lightgray;
+        border: white;
+        border-radius: 3%;
+      }
+        
+      .column {
+        float: left;
+        width: 50%;
+        padding: 5px;
+      }
+      
+      /* Clearfix (clear floats) */
+      .row::after {
+        content: "";
+        clear: both;
+        display: table;
+      }
+
     p {
         font-size: 16pt;
+        padding-top: 10px;
     }
     img{
-        border-radius: 50%;
+        border-radius: 30%;
+     
     }
+    
 </style>
 
 
-<div>
+<div class="row">
     <img src="https://ak-static.cms.nba.com/wp-content/uploads/headshots/nba/latest/260x190/{{player.person_id}}.png" style="  width: 250px;    ;" alt="Player Picture" align="left">
+    <p> Team: <a href="{% url 'team' team_name %}"> {{team_name}}  <img src="https://cdn.nba.com/logos/nba/{{player.team_id.team_id}}/primary/L/logo.svg" height=35px width=35px alt="{{team.name}}"></img></a> </p> 
     <p> Name: {{player.full_name}}</p>
-    <p> Team: <a href="{% url 'team' team_name %}"> {{team_name}} </a> </p>
-    <p> Height: {{player.height}}</p>
-    <p> Weight: {{player.weight}}</p>
-    <p style="margin-left: 17%;"> Position: {{player.position}}</p>
-    <p style="margin-left: 17%;"> Jersey Number: {{player.jersey}}</p>
-
+    <p style="margin-left: 250px;"> Height: {{player.height}}</p>
+    <p style="margin-left: 250px;"> Weight: {{player.weight}}</p>
+    <p style="margin-left: 250px;"> Position: {{player.position}}</p>
+    <p style="margin-left: 250px;"> Jersey Number: {{player.jersey}}</p>
 </div>
 
 <h3 style="text-align: center; font-size: 24pt;"><span><u>Career</u></span></h3>

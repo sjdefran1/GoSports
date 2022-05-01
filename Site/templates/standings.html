@@ -12,7 +12,11 @@
       .row {
         margin-left:-5px;
         margin-right:-5px;
-      }
+        background-color: lightgray;
+        border: white;
+        border-top-left-radius: 2%;
+        border-top-right-radius: 2%;
+    }
         
       .column {
         float: left;
@@ -32,17 +36,18 @@
     <!-- Bootstrap Notes -->
     <!-- Wrap everything with container, every 'col-sm' div tag breaks the page into a new column -->
     <!-- For better explanation go to https://getbootstrap.com/docs/4.1/layout/overview/ -->
-    <div class="row">
+    <div class="row" style="background-color:#124559; color:lightgray; margin-top:1%; margin-left:20%;margin-right:20% ">
+        
         <div class="column">
-            <h1 style="text-align: center;">Eastern standings</h1>
+            <h1 style="text-align: center; font-family: Monaco;">Eastern standings</h1>
         </div>
         <div class="column">
             <h1 style="text-align: center;">Western standings</h1>
         </div>
 
     </div>
-    <div class="row">
-       
+    <div class="row" style="background-color: whitesmoke; border: 1px solid darkgray; border-radius:0%;margin-left:3%; margin-right:3%;">
+       <br>
         <div class="column">
             <table class="standingsTable"  id="east_table">
                 <tr>

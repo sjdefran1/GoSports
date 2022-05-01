@@ -4,6 +4,32 @@
 {% block content %}
 
 <style>
+    * {
+        box-sizing: border-box;
+      }
+      
+      .row {
+        margin-top: 10px;
+        margin-left:20px;
+        margin-right: 20px;
+        background-color: lightgray;
+        border: white;
+        border-radius: 2%;
+      }
+        
+      .column {
+        float: left;
+        width: 50%;
+        padding: 5px;
+      }
+      
+      /* Clearfix (clear floats) */
+      .row::after {
+        content: "";
+        clear: both;
+        display: table;
+      }
+
     p {
         text-align: center;
         font-size: 16pt;
@@ -27,13 +53,16 @@
         font-size: 18pt;
     }
 </style>
+<div class="row">
+    <div>
+        <img src="{% static 'HomePageItem.png' %}" class=smallHeader></img>
+    </div>
 
-<div>
-    <img src="{% static 'HomePageItem.png' %}" class=smallHeader></img>
+    <br>
+    <h1 style="text-align: center;">Welcome to GoSports! This website is the place to go to find stats on your favorite teams and players.</h1>
 </div>
 
-<p>Welcome to GoSports! This website is the place to go to find stats on your favorite teams and players.</p>
-
+<div class="row" style="margin-top:2%">
 <h1 style="text-align: center;"><u>Games Today</u></h1>
 
 <table class="scheduleTable">
@@ -54,6 +83,7 @@
     
     {% endfor %}
     </table>
-
+    <br><br>
+</div>
 
 {% endblock %}

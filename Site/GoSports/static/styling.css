@@ -405,9 +405,10 @@ img.teams:focus {
 .standingsTable tr {
   height: 50px;
   border-bottom: 1px solid black;
+  background-color: #6295962c;
 }
 .standingsTable tr:nth-child(even) {
-  background-color: #bebdbd;
+  background-color: #c4c1c1;
 }
 .standingsTable tr:hover{background-color: rgb(148, 158, 246);}
 
