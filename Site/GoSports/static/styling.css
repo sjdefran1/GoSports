@@ -292,8 +292,9 @@ button.primaryContained:hover {
 
 img.teams:hover,
 img.teams:focus {
-  width: 112px;
-  height: 112px;
+  border: 1px solid black;
+  border-radius: 50%;
+  opacity: .6;
 }
 
 .scheduleTable {
@@ -356,9 +357,11 @@ img.teams:focus {
 .rosterTable tr {
   height: 50px;
   border-bottom: 1px solid black;
+  background-color: #6295962c;
+
 }
 .rosterTable tr:nth-child(even) {
-  background-color: #AEC3B0;
+  background-color: #c4c1c1;
 }
 .rosterTable tr:hover{background-color: rgb(148, 158, 246);}
 

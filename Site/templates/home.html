@@ -8,7 +8,12 @@
     * {
         box-sizing: border-box;
       }
-
+    
+    .col {
+        border: 1px solid black; 
+        margin-left:3%; 
+        margin-right:3%;
+    }
     p {
         text-align: center;
         font-size: 16pt;
@@ -42,37 +47,15 @@
     <h1 style="text-align: center;">Welcome to GoSports! This website is the place to go to find stats on your favorite teams and players.</h1>
 </div>
 </div>
-{% comment %} 
-<div class ="container">
-<h1 style="text-align: center;"><u>Games Today</u></h1>
-<table class="scheduleTable">
-    {% for game in games_today %}
-    
-    {% if game.qtr == 0 %}
-    <td>
-         {{game.home_team}}  @  {{game.away_team}} <br> <br>
-        {{game.status}}
-    </td>
-    {% else %}
-    <td>
-        {{game.home_team}} @ {{game.away_team}} <br> <br>
-        {{game.home_pts|floatformat:"0"}} - {{game.away_pts|floatformat:"0"}} <br> <br>
-        {{game.status}}: {{game.time}} remaining
-    </td>
-    {% endif %}
-    
-    {% endfor %}
-    </table>
-    <br><br>
-</div> {% endcomment %}
 
-<div class="container">
-    <div class="row">
+
+<div class="container" style="justify-content: space-between;">
+    <div class="row justify-content-end">
     {% for game in games_today %}
-        <div class="col">
+        <div class="col" style="">
         {% if game.qtr == 0 %}
-            {{game.home_team}}  @  {{game.away_team}} <br> <br>
-            {{game.status}}
+            <p>{{game.home_team}}  @  {{game.away_team}}<br>{{game.status}}</p>
+            
 
         {% else %}
             {{game.home_team}} @ {{game.away_team}} <br> <br>

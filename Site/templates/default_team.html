@@ -10,22 +10,9 @@
       
       .row {
         margin-top: 10px;
-        background-color: lightgray;
+        background-color: #f0f0f0;
         border: white;
         border-radius: 2%;
-      }
-        
-      .column {
-        float: left;
-        width: 50%;
-        padding: 5px;
-      }
-      
-      /* Clearfix (clear floats) */
-      .row::after {
-        content: "";
-        clear: both;
-        display: table;
       }
 </style>
 
@@ -93,12 +80,14 @@
 
 </div>
 -->
-<div class="row">
-    <div class="teams_grid">
+<div class="container">
+    <div class="row">
         {% for team in all_teams %}
-            <div class="teams_grid_item"> <a href="{% url 'team' team.name %}"> <img class="teams" src="https://cdn.nba.com/logos/nba/{{team.team_id}}/primary/L/logo.svg" height=110px width=110px alt="{{team.name}}"></img> </a> </div>
+            <div class="col-2"> <a href="{% url 'team' team.name %}"> <img class="teams" src="https://cdn.nba.com/logos/nba/{{team.team_id}}/primary/L/logo.svg" height=110px width=110px alt="{{team.name}}"></img> </a> </div>
         {% endfor %}
     </div>
+</div>
+
 </div>
 </body>
 {% endblock %}
