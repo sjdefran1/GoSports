@@ -4,30 +4,9 @@
 {% block content %}
 
 <style>
+    
     * {
         box-sizing: border-box;
-      }
-      
-      .row {
-        margin-top: 10px;
-        margin-left:20px;
-        margin-right: 20px;
-        background-color: lightgray;
-        border: white;
-        border-radius: 2%;
-      }
-        
-      .column {
-        float: left;
-        width: 50%;
-        padding: 5px;
-      }
-      
-      /* Clearfix (clear floats) */
-      .row::after {
-        content: "";
-        clear: both;
-        display: table;
       }
 
     p {
@@ -53,7 +32,8 @@
         font-size: 18pt;
     }
 </style>
-<div class="row">
+<div class="container">
+<div class="row" style="background-color: whitesmoke">
     <div>
         <img src="{% static 'HomePageItem.png' %}" class=smallHeader></img>
     </div>
@@ -61,10 +41,10 @@
     <br>
     <h1 style="text-align: center;">Welcome to GoSports! This website is the place to go to find stats on your favorite teams and players.</h1>
 </div>
-
-<div class="row" style="margin-top:2%">
+</div>
+{% comment %} 
+<div class ="container">
 <h1 style="text-align: center;"><u>Games Today</u></h1>
-
 <table class="scheduleTable">
     {% for game in games_today %}
     
@@ -84,6 +64,23 @@
     {% endfor %}
     </table>
     <br><br>
-</div>
+</div> {% endcomment %}
 
+<div class="container">
+    <div class="row">
+    {% for game in games_today %}
+        <div class="col">
+        {% if game.qtr == 0 %}
+            {{game.home_team}}  @  {{game.away_team}} <br> <br>
+            {{game.status}}
+
+        {% else %}
+            {{game.home_team}} @ {{game.away_team}} <br> <br>
+            {{game.home_pts|floatformat:"0"}} - {{game.away_pts|floatformat:"0"}} <br> <br>
+            {{game.status}}: {{game.time}} remaining
+        {% endif %}
+        </div>
+        {% endfor %}
+    </div>  
+</div>
 {% endblock %}

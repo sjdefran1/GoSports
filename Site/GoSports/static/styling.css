@@ -143,6 +143,7 @@ tr:nth-child(even) {
 
 
 /* Comments page CSS */
+/*
 .container {
   max-width: 640px;
   margin: 30px auto;
@@ -174,7 +175,7 @@ tr:nth-child(even) {
   transition: all 0.5s;
   margin-top: 15px;
 }
-
+*/
 button.primaryContained {
   background: #124559;
   color: #fff;
