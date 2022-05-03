@@ -66,7 +66,7 @@ The app was built in a private instance of GitLab for Iowa State University, hen
 * [Django](https://www.djangoproject.com/)
 * [Python](https://www.python.org/)
 * [sqlite3](https://www.sqlite.org/index.html)
-* HTML & CSS
+* [bootstrap](https://getbootstrap.com/docs/4.0/getting-started/introduction/)
 <p align="right">(<a href="#top">back to top</a>)</p>
 
 
@@ -100,33 +100,27 @@ Nba Api is what allowed this entire project to come together with real informati
 
 ### Team and Player Pages
 #### Choose Team Page
-![choose_team](https://user-images.githubusercontent.com/72476187/166098756-b93696a3-f131-4b0f-9713-0bd15258a68d.png)
+![choose_2](https://user-images.githubusercontent.com/72476187/166412869-8e9ce095-d0ef-4a57-8216-2d47c2abdaa4.gif)
 
-#### Specific Player Page (1)
-![tatum_overview](https://user-images.githubusercontent.com/72476187/166098772-d1f6ca81-fed1-484e-9f38-7ec698039806.png)
-#### Career view (2)
-![tatum_career](https://user-images.githubusercontent.com/72476187/166098795-5088c34b-9b5c-4069-9563-d6a46f9f0a38.png)
+#### Team Page
+![team_page](https://user-images.githubusercontent.com/72476187/166413634-0d464e4e-6f40-417b-a65e-4480e1dfc6ee.gif)
+
+#### Specific Player Page
+![player_page](https://user-images.githubusercontent.com/72476187/166412997-b3beb385-02e5-48d6-afe6-47446fb3917e.gif)
 
 ### Home Page
 #### Live Scores and Game times available using game_standings.py
-![image](https://user-images.githubusercontent.com/72476187/166098813-0b0570ae-b509-444f-88e6-70cb7ce98da8.png)
+![home_page](https://user-images.githubusercontent.com/72476187/166413187-d103b493-4760-4b12-be21-dfe3a447003f.gif)
+### Schedule
+![schedule](https://user-images.githubusercontent.com/72476187/166413294-630432d0-6485-4017-b205-bea64918ae42.gif)
 
 ### Standings
-![image](https://user-images.githubusercontent.com/72476187/166098735-c741b513-5889-4b28-8ed3-4c0c37f51383.png)
-### Schedule
-![schedule](https://user-images.githubusercontent.com/72476187/165996625-673a78f5-d38b-41d9-b4bc-87411451a7cc.png)
+![standings](https://user-images.githubusercontent.com/72476187/166413248-fb703849-ba9e-4789-84eb-fcf9dada2095.gif)
 
-#### Team Page
-#### (1)
-![specific_team1](https://user-images.githubusercontent.com/72476187/165996792-174a3fa0-e116-4911-8868-afb747c2480b.png)
-#### (2)
-![specific_team2](https://user-images.githubusercontent.com/72476187/165996863-fb20872a-4beb-412f-98b5-093fe0addb21.png)
 
 ### Search Functionality
-#### Teams
-![team_search](https://user-images.githubusercontent.com/72476187/166099835-5a3c651d-3f99-423c-a0f3-563e704b4139.png)
-#### Players
-![player_search](https://user-images.githubusercontent.com/72476187/166099866-d9587209-40e1-4ada-9593-2917bcfdfc59.png)
+![search](https://user-images.githubusercontent.com/72476187/166413617-fd6f3399-f23e-41f3-8371-ac01880ef62b.gif)
+
 
 ### Django Models Design:
 ![gosports_db](https://user-images.githubusercontent.com/72476187/165996178-c3003bbe-5e9f-43fe-a276-a144997c8926.png)
