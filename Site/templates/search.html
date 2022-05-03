@@ -3,13 +3,35 @@
 {% block page_title %} GoSports! {% endblock %}
 
 {% block content %}
+
+<style>
+  h2 {
+    border: 1px solid black;
+    background-color: #292b2c;
+    color: whitesmoke; 
+    margin-right: 90%;
+    text-align: center;
+    font-family: Monaco;
+  }
+  h1 {
+    opacity: 20%;
+    margin-left: 2%;
+  }
+  a {
+    text-decoration: none;
+  }
+  a:hover {
+    text-decoration: underline;
+  }
+</style>
+<h1>Search Results for '{{query}}'</h1><br>
 <div class="container">
-  <h1>Search Results for {{query}}</h1>
   {% if teams|length > 0 %}
   <h2>Teams</h2>
     {% for team in teams %}
       <a href="{% url 'team' team.name %}">{{ team.name }} <img src="https://cdn.nba.com/logos/nba/{{team.team_id}}/primary/L/logo.svg" height=35px width=35px alt="{{team.name}}"></img></a><br>
     {% endfor %}
+    <br>
  
   {% endif %}
 
