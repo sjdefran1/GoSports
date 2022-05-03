@@ -138,9 +138,7 @@ def schedule_page(request):
 
 
 def search_page(request):
-    model = Teams
-    template_name = 'search_page.html'
-
+    
     query = request.GET.get("search")
     teams = Teams.objects.filter (
         name__icontains=query

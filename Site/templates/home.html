@@ -57,13 +57,30 @@
     {% for game in games_today %}
         <div class="col" style="text-align: center;">
         {% if game.qtr == 0 %}
-            <p>{{game.home_team}}  @  {{game.away_team}}<br>{{game.status}}</p>
+            <p> <img  src="https://cdn.nba.com/logos/nba/{{game.home_id}}/primary/L/logo.svg" height=50px width=50px alt="{{game.home_team}}"></img> 
+                {{game.home_team}}  @  {{game.away_team}} 
+                <img  src="https://cdn.nba.com/logos/nba/{{game.away_id}}/primary/L/logo.svg" height=50px width=50px alt="{{game.away_team}}"></img>
+                <br>{{game.status}}
+            </p>
             
 
         {% else %}
-            {{game.home_team}} @ {{game.away_team}} <br> <br>
-            {{game.home_team}} {{game.home_pts|floatformat:"0"}} - {{game.away_pts|floatformat:"0"}} {{game.away_team}}  <br> <br>
-            {{game.status}}: {{game.time}} remaining
+           <h3> {{game.home_team}} @ {{game.away_team}} </h3> 
+            <p>
+                <img  src="https://cdn.nba.com/logos/nba/{{game.home_id}}/primary/L/logo.svg" height=50px width=50px alt="{{game.home_team}}"></img> 
+                    {{game.home_pts|floatformat:"0"}} - {{game.away_pts|floatformat:"0"}}
+                <img  src="https://cdn.nba.com/logos/nba/{{game.away_id}}/primary/L/logo.svg" height=50px width=50px alt="{{game.away_team}}"></img>
+            </p>
+  
+            
+        {% endif %}
+        <!-- status for some reason has 15 extra spaces to it -->
+        {% if game.status|stringformat:"s" == "Final               " %}
+            <p>{{game.status}}</p>
+        {% elif game.qtr == 0 %}
+            
+        {% else %}
+            <p>{{game.status}}: {{game.time}} remaining</p>
         {% endif %}
         </div>
         {% endfor %}
