@@ -11,6 +11,9 @@
   font-style: normal;
   font-weight: 400;
 }
+body {
+  background-color: #f7f7f7;
+}
 
 .Header h1 {
   margin-left: 615px;
@@ -143,6 +146,7 @@ tr:nth-child(even) {
 
 
 /* Comments page CSS */
+/*
 .container {
   max-width: 640px;
   margin: 30px auto;
@@ -174,7 +178,7 @@ tr:nth-child(even) {
   transition: all 0.5s;
   margin-top: 15px;
 }
-
+*/
 button.primaryContained {
   background: #124559;
   color: #fff;
@@ -291,8 +295,9 @@ button.primaryContained:hover {
 
 img.teams:hover,
 img.teams:focus {
-  width: 112px;
-  height: 112px;
+  border: 1px solid black;
+  border-radius: 50%;
+  opacity: .6;
 }
 
 .scheduleTable {
@@ -355,9 +360,11 @@ img.teams:focus {
 .rosterTable tr {
   height: 50px;
   border-bottom: 1px solid black;
+  background-color: #6295962c;
+
 }
 .rosterTable tr:nth-child(even) {
-  background-color: #AEC3B0;
+  background-color: #c4c1c1;
 }
 .rosterTable tr:hover{background-color: rgb(148, 158, 246);}
 
@@ -367,7 +374,6 @@ img.teams:focus {
 }
 .rosterTable a:hover{
   text-decoration: underline;
-  font-size: 102%;
 }
 /* ------------ end roster table-----*/
 
@@ -418,5 +424,4 @@ img.teams:focus {
 }
 .standingsTable a:hover{
   text-decoration: underline;
-  font-size: 102%;
 }

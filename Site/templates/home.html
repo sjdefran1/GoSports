@@ -4,36 +4,33 @@
 {% block content %}
 
 <style>
+    
     * {
         box-sizing: border-box;
-      }
-      
-      .row {
-        margin-top: 10px;
-        margin-left:20px;
-        margin-right: 20px;
-        background-color: lightgray;
-        border: white;
-        border-radius: 2%;
-      }
         
-      .column {
-        float: left;
-        width: 50%;
-        padding: 5px;
       }
-      
-      /* Clearfix (clear floats) */
-      .row::after {
-        content: "";
-        clear: both;
-        display: table;
+      body{
+        background-color: #f7f7f7;
       }
-
+    
+    .col {
+        border: 3px solid #1b6887; 
+        border-radius: 1.25rem;
+        background-color: #262423;
+        margin-left:1%; 
+        margin-right:1%;
+    }
+    .col:hover {
+        background-color: #433F3D;
+    }
     p {
         text-align: center;
         font-size: 16pt;
-        color: #124559;
+        color: whitesmoke;
+    }
+    #matchup {
+        font-size: 24px;
+
     }
 
     .smallHeader {
@@ -53,7 +50,8 @@
         font-size: 18pt;
     }
 </style>
-<div class="row">
+<div class="container">
+<div class="row" style="background-color: #DDDCDC; margin-bottom: 2%; border-radius: 1.25rem;">
     <div>
         <img src="{% static 'HomePageItem.png' %}" class=smallHeader></img>
     </div>
@@ -61,29 +59,41 @@
     <br>
     <h1 style="text-align: center;">Welcome to GoSports! This website is the place to go to find stats on your favorite teams and players.</h1>
 </div>
-
-<div class="row" style="margin-top:2%">
-<h1 style="text-align: center;"><u>Games Today</u></h1>
-
-<table class="scheduleTable">
-    {% for game in games_today %}
-    
-    {% if game.qtr == 0 %}
-    <td>
-         {{game.home_team}}  @  {{game.away_team}} <br> <br>
-        {{game.status}}
-    </td>
-    {% else %}
-    <td>
-        {{game.home_team}} @ {{game.away_team}} <br> <br>
-        {{game.home_pts|floatformat:"0"}} - {{game.away_pts|floatformat:"0"}} <br> <br>
-        {{game.status}}: {{game.time}} remaining
-    </td>
-    {% endif %}
-    
-    {% endfor %}
-    </table>
-    <br><br>
 </div>
 
+
+<div class="container" style="justify-content: space-between;">
+    <div class="row justify-content-end">
+    {% for game in games_today %}
+        <div class="col" style="text-align: center;">
+        {% if game.qtr == 0 %}
+            <p> <img  src="https://cdn.nba.com/logos/nba/{{game.home_id}}/primary/L/logo.svg" height=50px width=50px alt="{{game.home_team}}"></img> 
+                {{game.home_team}}  @  {{game.away_team}} 
+                <img  src="https://cdn.nba.com/logos/nba/{{game.away_id}}/primary/L/logo.svg" height=50px width=50px alt="{{game.away_team}}"></img>
+                <br>{{game.status}}
+            </p>
+            
+
+        {% else %}
+           <p id="matchup" style="color: whitesmoke; margin-top:2%;"> {{game.home_team}} @ {{game.away_team}} </h3> 
+            <p style="margin-top:2%">
+                <img  src="https://cdn.nba.com/logos/nba/{{game.home_id}}/primary/L/logo.svg" height=50px width=50px alt="{{game.home_team}}"></img> 
+                    {{game.home_pts|floatformat:"0"}} - {{game.away_pts|floatformat:"0"}}
+                <img  src="https://cdn.nba.com/logos/nba/{{game.away_id}}/primary/L/logo.svg" height=50px width=50px alt="{{game.away_team}}"></img>
+            </p>
+  
+            
+        {% endif %}
+        <!-- status for some reason has 15 extra spaces to it -->
+        {% if game.status|stringformat:"s" == "Final               " %}
+            <p>{{game.status}}</p>
+        {% elif game.qtr == 0 %}
+            
+        {% else %}
+            <p>{{game.status}}: {{game.time}} remaining</p>
+        {% endif %}
+        </div>
+        {% endfor %}
+    </div>  
+</div>
 {% endblock %}

@@ -232,14 +232,16 @@ class GamesThisWeek(models.Model):
 # PK: index
 # FK:
 class GamesToday(models.Model):
-    index = models.IntegerField(primary_key = True, blank=True, null=False)
-    home_team = models.TextField(db_column='Home_Team', blank=True, null=True) # 'Boston Celtics'  
-    away_team = models.TextField(db_column='Away_Team', blank=True, null=True)  
-    home_pts = models.FloatField(db_column='Home_Pts', blank=True, null=True)  
-    away_pts = models.FloatField(db_column='Away_Pts', blank=True, null=True)  
-    qtr = models.IntegerField(db_column='QTR', blank=True, null=True)  # 4
-    time = models.TextField(db_column='Time', blank=True, null=True)  # '3:30 Est'
-    status = models.TextField(db_column='Status', blank=True, null=True) # 'Final'
+    index = models.IntegerField(blank=True, null=False, primary_key=True)
+    home_team = models.TextField(db_column='Home_Team', blank=True, null=True)  # Field name made lowercase.
+    home_id = models.IntegerField(db_column='Home_ID', blank=True, null=True)  # Field name made lowercase.
+    away_team = models.TextField(db_column='Away_Team', blank=True, null=True)  # Field name made lowercase.
+    away_id = models.IntegerField(db_column='Away_ID', blank=True, null=True)  # Field name made lowercase.
+    home_pts = models.FloatField(db_column='Home_Pts', blank=True, null=True)  # Field name made lowercase.
+    away_pts = models.FloatField(db_column='Away_Pts', blank=True, null=True)  # Field name made lowercase.
+    qtr = models.IntegerField(db_column='QTR', blank=True, null=True)  # Field name made lowercase.
+    time = models.TextField(db_column='Time', blank=True, null=True)  # Field name made lowercase.
+    status = models.TextField(db_column='Status', blank=True, null=True)  # Field name made lowercase.
 
     class Meta:
         managed = True
