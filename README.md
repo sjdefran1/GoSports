@@ -19,6 +19,8 @@ Django Models Overview:
         <li><a href="#built-with">Built With</a></li>
       </ul>
     </li>
+    <li><a href="#roadmap">Road Map</a></li>
+    <li><a href="#getting-started">Getting Started</a></li>
     <li><a href="#license">License</a></li>
     <li><a href="#contact">Contact</a></li>
     <li><a href="#acknowledgments">Acknowledgments</a></li>
@@ -48,7 +50,7 @@ Django Models Overview:
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-Gosports is a full Stack Django web app that displays historical/live Nba Statistics. This project was created by me and three other students from Iowa State University (See Contact) in a 8 week time-span, broke into four two week sprints. The app originally didn't use bootstrap, after submitting it I went through and made the frontend prettier.
+Gosports is a full Stack Django web app that displays historical/live Nba Statistics. This project was created by me and three other students from Iowa State University (See Contact) in a 8 week time-span, broke into four two week sprints. The app originally didn't use bootstrap, after submitting it I went through and had fun messing around with the frontend.
 
 The app was built in a private instance of GitLab for Iowa State University, hence no inital commit history. After submitting the project I decided to upload it to my personal GitHub.
 
@@ -78,6 +80,29 @@ The app was built in a private instance of GitLab for Iowa State University, hen
 - [ ] Gather more common info for each team, to include on their specific page
 - [ ] Restyle team pages to match team colors
 
+<!-- GETTING STARTED -->
+## Getting Started
+
+Unfortunately I was not aware of the greatness of venv's for a python project when we first started out, so I installed everything to my local sitepackages... That being said I can list out a few pip installs that I can think of & know you will need. 
+
+### Prerequisites
+
+* nba api
+  ```sh
+  pip install nba-api
+  ```
+* Django
+  ```sh
+  pip install Django
+  ```
+* mysql
+  ```sh
+  pip install mysql
+  ```
+* Pandas
+  ```sh
+  pip install pandas
+  ```
 
 <!-- LICENSE -->
 ## License
@@ -97,10 +122,12 @@ GM: Kyle Rooney, Kaya Zdan, Shannon McCarty
 
 <!-- ACKNOWLEDGMENTS -->
 ## Acknowledgments
-Nba Api is what allowed this entire project to come together with real information. They have information for getting started making basic calls to their API within their github.
+Nba Api is what allowed this entire project to come together with real information. They have information for getting started making basic calls to their API within their github. After creating a .db file, a great interface for viewing/editing is sqlitebroswer.
 
 * [nba_api](https://github.com/swar/nba_api)
 * [w3 Schools HTML & CSS Tutorials](https://www.webpagefx.com/tools/emoji-cheat-sheet)
+* [Useful readme Format, used here :)](https://github.com/othneildrew/Best-README-Template/blob/master/README.md)
+* [Recommended SQL browser](https://sqlitebrowser.org/)
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
