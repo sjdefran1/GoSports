@@ -48,8 +48,9 @@ Django Models Overview:
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-Gosports is a full Stack Django web app that displays historical/live Nba Statistics. This project was created by me and three other students from Iowa State University (See Contact) in a 8 week time-span, broke into four two week sprints.
-The app was built in a private instance of GitLab for Iowa State University, hence no commit history. After submitting the project I decided to upload it to my personal GitHub.
+Gosports is a full Stack Django web app that displays historical/live Nba Statistics. This project was created by me and three other students from Iowa State University (See Contact) in a 8 week time-span, broke into four two week sprints. The app originally didn't use bootstrap, after submitting it I went through and made the frontend prettier.
+
+The app was built in a private instance of GitLab for Iowa State University, hence no inital commit history. After submitting the project I decided to upload it to my personal GitHub.
 
 ### Features
 * View live scores of games going on today
@@ -68,6 +69,14 @@ The app was built in a private instance of GitLab for Iowa State University, hen
 * [sqlite3](https://www.sqlite.org/index.html)
 * [bootstrap](https://getbootstrap.com/docs/4.0/getting-started/introduction/)
 <p align="right">(<a href="#top">back to top</a>)</p>
+
+
+## Roadmap
+
+- [x] Learn how bootstrap works & integrate into the site
+- [ ] Add a page/interface for live games, inlcude box score
+- [ ] Gather more common info for each team, to include on their specific page
+- [ ] Restyle team pages to match team colors
 
 
 <!-- LICENSE -->
