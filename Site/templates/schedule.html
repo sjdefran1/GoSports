@@ -2,32 +2,101 @@
 {% block page_title %} Schedule {% endblock %}
 {% load static %}
 {% block content %}
+<style>
+  a {
+    text-decoration: none;
+    color: #5bc0de;
+  }
+  a:hover {
+    text-decoration: underline;
+  }
 
-<h1 style="text-align: center;"><u>Weekly Schedule</u></h1>
+  h1 {
+    border: 1px solid #f7f7f7;
+    border-radius: 7%;
+    background-color: #292b2c;
+    color: whitesmoke; 
+    margin-right: 40%;
+    margin-left: 40%;
 
-<table class="scheduleTable">
-  {% for day , games in games_by_day.items %}
+    text-align: center;
+    font-family: Monaco;
+  }
+
+  .row {
+    background-color: #efefef;
+    border-radius: 1.25rem;
+    margin-bottom: 3%;
+  }
+
+  p {
+    text-align: center;
+  }
+
+  .col {
+    border-radius: 1.25rem;
+    color: #292b2c;
+   
+    margin-left: 7%;
+    margin-right: 7%;
+    margin-bottom: 2%;
+    
+  }
   
-  <tr>
-    <!-- Header -->
-    <th> {{day}} </th>
+  #day-header {
+    border: 1px solid white;
+    color:  #292b2c;
+    background-color: #f7f7f7;
+    border-radius: 1.25rem;
+    font-size: 24px;
+  }
 
-    <!-- All Games on that Day -->
-    {% for game in games %}
-        <td>{{game.away_seed}} <a href="{% url 'team' game.away_team %}">{{game.away_team}}</a> @ <br>{{game.home_seed}} <a href="{% url 'team' game.home_team %}">{{game.home_team}}</a><br>{{game.status}}</td>
+  #upcoming {
+    border: 1px solid white;
+    border-radius: 1.25rem;
+
+    background-color: #f7f7f7;
+    color: #292b2c;
+    font-size: 50px;
+    margin-right: 30%;
+    margin-left: 30%;
+  }
+
+</style>
+<br>
+<div class="container">
+  <p id="upcoming" class="font-weight-light" style="text-align: center;">Upcoming Schedule</p>
+
+    {% for day , games in games_by_day.items %}
+      
+        <!-- Header -->
+        {% if games|length != 0 %}
+          <div class="row">
+            <p class="font-weight-light" id="day-header"> {{day}} </p>
+            <!-- All Games on that Day -->
+            {% for game in games %}
+              <div class="col rounded" >
+                <p style="text-align: center" >
+                  <img src="https://cdn.nba.com/logos/nba/{{game.away_team_id}}/primary/L/logo.svg" height=50px width=50px alt="{{game.home_team}}"></img>
+                  {{game.away_seed}} <a href="{% url 'team' game.away_team %}">{{game.away_team}}</a> @ {{game.home_seed}} <a href="{% url 'team' game.home_team %}">{{game.home_team}}</a>
+                  <img src="https://cdn.nba.com/logos/nba/{{game.home_team_id}}/primary/L/logo.svg" height=50px width=50px alt="{{game.home_team}}"></img>
+                  <br>{{game.status}}
+                  
+                </p>
+              </div>
+            {% endfor %}
+
+            <!-- Add Extra Spacing to Empty Columns -->
+            {% for ch in num_cols %}
+              {% if forloop.counter0 >= games|length %}
+                <p> </p>
+              {% endif %}
+          
+            {% endfor %}
+          </div>
+        {% endif %}
+     
     {% endfor %}
 
-    <!-- Add Extra Spacing to Empty Columns -->
-    {% for ch in num_cols %}
-      {% if forloop.counter0 >= games|length %}
-        <td> </td>
-      {% endif %}
-    {% endfor %}
-
-  </tr>
-
-  {% endfor %}
-
-</table>
-
+</div>
 {% endblock %}

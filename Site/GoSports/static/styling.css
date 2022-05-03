@@ -11,6 +11,9 @@
   font-style: normal;
   font-weight: 400;
 }
+body {
+  background-color: #f7f7f7;
+}
 
 .Header h1 {
   margin-left: 615px;

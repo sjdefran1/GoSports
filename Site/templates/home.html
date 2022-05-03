@@ -15,7 +15,7 @@
     
     .col {
         border: 3px solid #1b6887; 
-        border-radius: 2%;
+        border-radius: 1.25rem;
         background-color: #262423;
         margin-left:1%; 
         margin-right:1%;
@@ -27,6 +27,10 @@
         text-align: center;
         font-size: 16pt;
         color: whitesmoke;
+    }
+    #matchup {
+        font-size: 24px;
+
     }
 
     .smallHeader {
@@ -47,7 +51,7 @@
     }
 </style>
 <div class="container">
-<div class="row" style="background-color: #DDDCDC; margin-bottom: 2%">
+<div class="row" style="background-color: #DDDCDC; margin-bottom: 2%; border-radius: 1.25rem;">
     <div>
         <img src="{% static 'HomePageItem.png' %}" class=smallHeader></img>
     </div>
@@ -71,7 +75,7 @@
             
 
         {% else %}
-           <h3 style="color: whitesmoke; margin-top:2%;"> {{game.home_team}} @ {{game.away_team}} </h3> 
+           <p id="matchup" style="color: whitesmoke; margin-top:2%;"> {{game.home_team}} @ {{game.away_team}} </h3> 
             <p style="margin-top:2%">
                 <img  src="https://cdn.nba.com/logos/nba/{{game.home_id}}/primary/L/logo.svg" height=50px width=50px alt="{{game.home_team}}"></img> 
                     {{game.home_pts|floatformat:"0"}} - {{game.away_pts|floatformat:"0"}}

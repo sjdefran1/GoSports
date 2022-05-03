@@ -2,15 +2,30 @@
 {% block page_title %} {{team.name}} {% endblock %}
 {% block content %}
 
+<style>
+    #top-page {
+        border: 3px solid #1b6887;
+        border-radius: 2%;
+        margin-left: 25%;
+        margin-right: 25%;
+        margin-bottom: 2%;
+        background-color: #262423;
+        color: #f7f7f7;
+    }
+
+    body {
+        background-color: #f7f7f7;
+      }
+</style>
+
+
 <br>
-<br>
-<br>
+
 <!-- <img src="https://cdn.nba.com/logos/nba/{{team.team_id}}/primary/L/logo.svg"> !-->
 <div class="container">
-    <div class="row justify-content-center">
+    <div class="row justify-content-center" id="top-page">
         <h1 style="text-align:center">{{team.name}}</h1>
-        <img src="https://cdn.nba.com/logos/nba/{{team.team_id}}/primary/L/logo.svg" style="width:250px">
-        
+        <img src="https://cdn.nba.com/logos/nba/{{team.team_id}}/primary/L/logo.svg" style="width:250px">   
     </div>
 
     <div class="row">
