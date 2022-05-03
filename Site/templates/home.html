@@ -55,14 +55,14 @@
 <div class="container" style="justify-content: space-between;">
     <div class="row justify-content-end">
     {% for game in games_today %}
-        <div class="col" style="">
+        <div class="col" style="text-align: center;">
         {% if game.qtr == 0 %}
             <p>{{game.home_team}}  @  {{game.away_team}}<br>{{game.status}}</p>
             
 
         {% else %}
             {{game.home_team}} @ {{game.away_team}} <br> <br>
-            {{game.home_pts|floatformat:"0"}} - {{game.away_pts|floatformat:"0"}} <br> <br>
+            {{game.home_team}} {{game.home_pts|floatformat:"0"}} - {{game.away_pts|floatformat:"0"}} {{game.away_team}}  <br> <br>
             {{game.status}}: {{game.time}} remaining
         {% endif %}
         </div>

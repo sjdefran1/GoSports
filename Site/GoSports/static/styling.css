@@ -371,7 +371,6 @@ img.teams:focus {
 }
 .rosterTable a:hover{
   text-decoration: underline;
-  font-size: 102%;
 }
 /* ------------ end roster table-----*/
 
@@ -422,5 +421,4 @@ img.teams:focus {
 }
 .standingsTable a:hover{
   text-decoration: underline;
-  font-size: 102%;
 }
