@@ -57,7 +57,7 @@ The app was built in a private instance of GitLab for Iowa State University, hen
 * Look at your favorite teams roster, as well as each players indivual stats that season
 * View each active nba players career, also see common info about that player (height, weight, position, jersey #)
 * See the upcoming schedule (current week)
-* Create Account
+
 <p align="left">(<a href="#screen-shots">See Screenshots</a>)</p>
 
 
