@@ -1,7 +1,7 @@
 import sqlite3
 import pandas as pd
 
-from utils.game_api import get_upcoming_games
+from gs_api.game_api import get_upcoming_games
 
 import datetime
 

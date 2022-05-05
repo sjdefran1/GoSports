@@ -13,8 +13,8 @@ import pandas as pd
 import time
 import sqlite3
 
-from utils.team_player_api import get_team_roster, get_player_common_info
-from utils.util import get_all_team_nameslist
+from gs_api.team_player_api import get_team_roster, get_player_common_info
+from gs_api.util import get_all_team_nameslist
 
 
 def main():

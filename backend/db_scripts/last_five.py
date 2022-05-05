@@ -12,8 +12,8 @@ import time
 import pandas as pd
 
 # own api's
-from utils.util import get_all_team_nameslist
-from utils.game_api import last_n_games
+from gs_api.util import get_all_team_nameslist
+from gs_api.game_api import last_n_games
 # finding teams by id
 from nba_api.stats.static import teams
 

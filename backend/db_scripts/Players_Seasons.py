@@ -16,8 +16,8 @@ import time
 import sqlite3
 
 # files from backend directory
-from utils.team_player_api import get_team_players_stats
-from utils.util import get_all_team_nameslist
+from gs_api.team_player_api import get_team_players_stats
+from gs_api.util import get_all_team_nameslist
 
 
 def main():

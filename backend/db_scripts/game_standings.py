@@ -11,7 +11,7 @@ import sqlite3
 import pandas as pd
 
 # own api's from utils
-from utils.game_api import games_today, get_standings
+from gs_api.game_api import games_today, get_standings
 
 # populate nba_api_db
 def main():

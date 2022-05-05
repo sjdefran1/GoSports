@@ -14,7 +14,7 @@ import json
 import time 
 import sqlite3
 
-from utils.util import get_all_team_nameslist
+from gs_api.util import get_all_team_nameslist
 from gs_api.team_player_api import get_color
 
 def main():

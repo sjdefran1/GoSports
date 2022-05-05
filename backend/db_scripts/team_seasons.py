@@ -7,8 +7,8 @@ import pandas as pd
 import time
 import sqlite3
 
-from utils.team_player_api import last_n_years
-from utils.util import get_all_team_nameslist
+from gs_api.team_player_api import last_n_years
+from gs_api.util import get_all_team_nameslist
 team_stat_types = ['TEAM_ID', 'TEAM_CITY', 'TEAM_NAME', 'YEAR', 'GP', 'WINS', 'LOSSES', 'WIN_PCT', 'CONF_RANK', 'DIV_RANK', 'PO_WINS',\
                    'PO_LOSSES', 'CONF_COUNT', 'DIV_COUNT', 'NBA_FINALS_APPEARANCE', 'FGM', 'FGA', 'FG_PCT', 'FG3M', 'FG3A', 'FG3_PCT', 'FTM',\
                    'FTA', 'FT_PCT', 'OREB', 'DREB', 'REB', 'AST', 'PF', 'STL', 'TOV', 'BLK', 'PTS', 'PTS_RANK']
