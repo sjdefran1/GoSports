@@ -20,6 +20,9 @@
         margin-top:13%;
      
     }
+    #stats th {
+        background-color: {{player.team_id.color}}
+    }
     
 </style>
 
@@ -41,7 +44,7 @@
 
 <h3 style="text-align: center; font-size: 24pt;"><span><u>Career</u></span></h3>
 
-<table class="rosterTable">
+<table id="stats" class="rosterTable">
     <tr>
         <th>Season</th>
         <th>Age</th>

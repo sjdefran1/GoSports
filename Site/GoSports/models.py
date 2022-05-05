@@ -45,7 +45,8 @@ class Teams(models.Model):
     index = models.IntegerField(blank=True, null=True)
     name = models.TextField(db_column='TEAM_NAME', blank=True, null=True)  # 'Boston Celtics'
     team_id = models.IntegerField(primary_key=True, db_column='TEAM_ID', blank=True, null=False)  # '1610612737'
-
+    color = models.TextField(db_column='TEAM_COLOR', blank=True, null=True)  # 'Boston Celtics'
+    
     class Meta:
         managed = True
         db_table = 'Teams'

@@ -1,6 +1,17 @@
 * {
   box-sizing: border-box;
 }
+a {
+  text-decoration: none;
+}
+a:link:hover {
+  color: #5bc0de;
+}
+a:visited:hover {
+  color: #5bc0de;
+  
+
+}
 
 .Header {
   background-color: #124559;
@@ -313,8 +324,8 @@ img.teams:focus {
 }
 
 .scheduleTable th {
-  background-color: #124559;
-  color: white;
+  background-color: #f7f7f7;
+  color: #212529;
   width: 0px;
 }
 
@@ -334,6 +345,7 @@ img.teams:focus {
   table-layout: fixed;
   width: 95%;
   margin-left: 3%;
+  color: #f7f7f7;
 
   /*
   min-width: 50%;
@@ -360,21 +372,23 @@ img.teams:focus {
 .rosterTable tr {
   height: 50px;
   border-bottom: 1px solid black;
-  background-color: #6295962c;
+  background-color: #212529;
 
 }
-.rosterTable tr:nth-child(even) {
-  background-color: #c4c1c1;
-}
-.rosterTable tr:hover{background-color: rgb(148, 158, 246);}
+
+.rosterTable tr:hover{background-color: rgb(88, 87, 87);}
 
 .rosterTable a:link {
-  color: rgb(54, 84, 169);
+  color: #c7c2c2;
   text-decoration: none;
+}
+.rosterTable a:visited{
+  color: #c7c2c2;
 }
 .rosterTable a:hover{
   text-decoration: underline;
 }
+
 /* ------------ end roster table-----*/
 
 .standingsTable {
@@ -385,6 +399,7 @@ img.teams:focus {
   width: 95%;
   margin-left: 3%;
   margin-right: 3%;
+  color: #f7f7f7;
 
   /*
   min-width: 50%;
@@ -399,8 +414,8 @@ img.teams:focus {
 }
 
 .standingsTable th {
-  background-color: #0c2934;
-  color: white;
+  background-color: #353b42;
+  color: #f7f7f7;
   width: 1%;
 }
 
@@ -411,12 +426,10 @@ img.teams:focus {
 .standingsTable tr {
   height: 50px;
   border-bottom: 1px solid black;
-  background-color: #6295962c;
+  background-color: #212529;
 }
-.standingsTable tr:nth-child(even) {
-  background-color: #c4c1c1;
-}
-.standingsTable tr:hover{background-color: rgb(148, 158, 246);}
+
+.standingsTable tr:hover{background-color: rgb(88, 87, 87)}
 
 .standingsTable a:link {
   color: rgb(54, 84, 169);

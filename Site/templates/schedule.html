@@ -5,10 +5,19 @@
 <style>
   a {
     text-decoration: none;
-    color: #5bc0de;
+    color: black;
   }
   a:hover {
     text-decoration: underline;
+  }
+
+  body {
+    background-image: url("{% static 'kobe.jpg' %}");
+    background-color: #f7f7f7; /* Used if the image is unavailable */
+    height: 1500px; /* You must set a specified height */
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Do not repeat the image */
+    background-size: cover;
   }
 
   h1 {
@@ -27,6 +36,11 @@
     background-color: #efefef;
     border-radius: 1.25rem;
     margin-bottom: 3%;
+    opacity: 95%;
+  }
+
+  .row:hover{
+    opacity: 100%;
   }
 
   p {
@@ -52,20 +66,31 @@
   }
 
   #upcoming {
-    border: 1px solid white;
-    border-radius: 1.25rem;
+    /*border-radius: 1.25rem;*/
+    opacity: 95%;
+    background-color: #124559;
+    color: #f7f7f7;
+    font-size: 44px;
+    padding-bottom: 10px;
+    /*margin-right: 30%;*/
+    /*margin-left: 30%;*/
+    
+  }
 
-    background-color: #f7f7f7;
-    color: #292b2c;
-    font-size: 50px;
-    margin-right: 30%;
-    margin-left: 30%;
+  #footer {
+    border: 1px solid #212529;
+    background-color: #212529;
+
+  }
+
+  #schedule {
+    
   }
 
 </style>
-<br>
-<div class="container">
-  <p id="upcoming" class="font-weight-light" style="text-align: center;">Upcoming Schedule</p>
+<p id="upcoming" class="font-weight-light" style="text-align: center;">Upcoming Schedule</p>
+
+<div class="container" id="schedule">
 
     {% for day , games in games_by_day.items %}
       
@@ -99,4 +124,5 @@
     {% endfor %}
 
 </div>
+<p id="footer"> <br><br> </p>
 {% endblock %}

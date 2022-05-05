@@ -49,6 +49,10 @@
         border-right: 5px solid black;
         font-size: 18pt;
     }
+
+    #games-today {
+    
+    }
 </style>
 <div class="container">
 <div class="row" style="background-color: #DDDCDC; margin-bottom: 2%; border-radius: 1.25rem;">
@@ -62,7 +66,7 @@
 </div>
 
 
-<div class="container" style="justify-content: space-between;">
+<div id="games-today" class="container" style="justify-content: space-between;">
     <div class="row justify-content-end">
     {% for game in games_today %}
         <div class="col" style="text-align: center;">

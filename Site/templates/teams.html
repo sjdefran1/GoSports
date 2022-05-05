@@ -9,13 +9,27 @@
         margin-left: 25%;
         margin-right: 25%;
         margin-bottom: 2%;
-        background-color: #212529;
+        background-color: {{team.color}};
         color: #f7f7f7;
     }
 
     body {
         background-color: #f7f7f7;
       }
+    #team_table {
+        border-bottom: 7px solid {{team.color}};
+    }
+    #team_table th {
+        background-color: {{team.color}}
+    }
+
+    a:link:hover {
+        color: #5bc0de;
+    }
+    a:visited:hover {
+        color: #5bc0de;
+
+    }
 </style>
 
 
@@ -29,7 +43,7 @@
     </div>
 
     <div class="row">
-        <table class="standingsTable">
+        <table id="team_table" class="standingsTable">
             <tr>
                 <th>Year</th>
                 <th>GP</th>
@@ -57,7 +71,7 @@
 </div>
 
 <h1 style="text-align: center;margin-top: 50px"><u> Roster </u></h1><br>
-<table class="rosterTable">
+<table id="team_table" class="rosterTable">
     <tr>
         <th>Name</th>
         <th style="padding-left:40px">Age</th>
@@ -109,5 +123,5 @@
     </tr>
     {% endfor %}
 </table>
-
+<br>
 {% endblock %}

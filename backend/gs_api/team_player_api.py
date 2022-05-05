@@ -9,8 +9,6 @@
  
 """
 
-
-
 # used for time.sleep()
 import time
 import pandas as pd
@@ -178,6 +176,7 @@ def team_season_stats(teamID):
     team_stats = team_stats.get_data_frames()[0]
     team_stats = team_stats.iloc[-1]
     return team_stats
+
 
 # returns last n years of TEAM stats
 def last_n_years(teamID, n):
