@@ -50,7 +50,7 @@ Django Models Overview:
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-Gosports is a full Stack Django web app that displays historical/live Nba Statistics. This project was created by me and three other students from Iowa State University (See Contact) in a 8 week time-span, broke into four two week sprints. The app originally didn't use bootstrap, after submitting it I went through and had fun messing around with the frontend.
+Gosports is a full Stack Django web app that displays historical/live Nba Statistics. This project was created by me and three other students from Iowa State University (See Contact) in a 8 week time-span, broke into four two week sprints. At the end of the semeseter our project was voted top 6 out of 42 projects. The app originally didn't use bootstrap, after submitting it I went through and had fun messing around with the frontend.
 
 The app was built in a private instance of GitLab for Iowa State University, hence no inital commit history. After submitting the project I decided to upload it to my personal GitHub.
 
@@ -156,6 +156,9 @@ Nba Api is what allowed this entire project to come together with real informati
 
 ### Search Functionality
 ![search](https://user-images.githubusercontent.com/72476187/166413617-fd6f3399-f23e-41f3-8371-ac01880ef62b.gif)
+
+### Top 6 Project!!
+![top6](https://user-images.githubusercontent.com/72476187/167046001-2a75cb6a-c397-4650-8950-9aaccf925b35.PNG)
 
 
 ### Django Models Design:
